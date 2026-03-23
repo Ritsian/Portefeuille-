@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+      <div class="loader-text">Portfolio</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+
+    <!-- Custom cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+          </svg>
+        </div>
+        Portfolio
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#experience">Expérience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-search" id="searchBtn">
+        <svg viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" onclick="closeMobileMenu()">À propos</a>
+      <a href="#skills" onclick="closeMobileMenu()">Compétences</a>
+      <a href="#projects" onclick="closeMobileMenu()">Projets</a>
+      <a href="#experience" onclick="closeMobileMenu()">Expérience</a>
+      <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-lines"></div>
+      <div class="hero-content">
+        <div class="hero-badge">Développeur disponible</div>
+        <h1 class="hero-title">
+          Ratsimandresy<br />
+          <span class="line2">Tsiry Fitiavana</span>
+        </h1>
+        <p class="hero-desc">
+          Développeur passionné spécialisé dans la conception d'interfaces
+          modernes et d'expériences numériques mémorables.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              stroke-width="2"
+            >
+              <path d="M5 3l14 9-14 9V3z" />
+            </svg>
+            Voir les projets
+          </a>
+          <a href="#contact" class="btn-outline">Me contacter</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img
+          src="./img/prf copie.png"
+          alt="Portrait"
+        />
+      </div>
+      <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        Défiler
+      </div>
+    </section>
+
+    <!-- Skills / Programming -->
+    <section class="skills-section" id="skills">
+      <div class="skills-left">
+        <div class="section-tag">Programmation</div>
+        <h2 class="section-title reveal">
+          Compétences<br /><span style="color: var(--accent)">techniques</span>
+        </h2>
+        <div class="skills-grid">
+          <div class="skill-item reveal reveal-delay-1">
+            <div class="skill-label">
+              <span>Maquettage</span><span>90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="0.90"></div>
+            </div>
+          </div>
+          <div class="skill-item reveal reveal-delay-1">
+            <div class="skill-label">
+              <span>Consultation</span><span>85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="0.85"></div>
+            </div>
+          </div>
+          <div class="skill-item reveal reveal-delay-2">
+            <div class="skill-label">
+              <span>Marketing</span><span>78%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="0.78"></div>
+            </div>
+          </div>
+          <div class="skill-item reveal reveal-delay-2">
+            <div class="skill-label">
+              <span>Inspiration</span><span>95%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="0.95"></div>
+            </div>
+          </div>
+          <div class="skill-item reveal reveal-delay-3">
+            <div class="skill-label"><span>Codecode</span><span>88%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="0.88"></div>
+            </div>
+          </div>
+          <div class="skill-item reveal reveal-delay-3">
+            <div class="skill-label">
+              <span>Graphicoor</span><span>72%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill gold" data-width="0.72"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="skills-right" id="about">
+        <div class="section-tag">Conception</div>
+        <h2 class="section-title reveal">
+          À propos de <span style="color: var(--accent)">moi</span>
+        </h2>
+        <div class="about-text reveal">
+          <p>
+            Je suis un développeur & designer créatif avec plus de 5 ans
+            d'expérience dans la conception d'interfaces web modernes et
+            performantes. Passionné par l'intersection entre technologie et
+            design.
+          </p>
+          <p>
+            Mon approche combine rigueur technique et sensibilité artistique
+            pour créer des expériences numériques qui captivent les utilisateurs
+            et répondent aux objectifs business.
+          </p>
+        </div>
+        <div class="stats-row reveal">
+          <div class="stat-box">
+            <div class="stat-num">5<span class="accent">+</span></div>
+            <div class="stat-label">Années d'exp.</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">48<span class="accent">+</span></div>
+            <div class="stat-label">Projets réalisés</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">32<span class="accent">+</span></div>
+            <div class="stat-label">Clients satisfaits</div>
+          </div>
+        </div>
+        <div style="margin-top: 28px" class="reveal">
+          <a href="#contact" class="btn-primary">Me contacter</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured-section" id="projects">
+      <!-- Skills col -->
+      <div class="featured-col">
+        <div class="section-tag">Profil</div>
+        <div class="skill-card reveal">
+          <div class="skill-card-label">Compétence 01</div>
+          <div class="skill-card-title">Direction artistique</div>
+          <div class="skill-card-desc">
+            Création d'identités visuelles cohérentes et mémorables qui
+            reflètent l'essence des marques.
+          </div>
+        </div>
+        <div class="skill-card reveal reveal-delay-1">
+          <div class="skill-card-label">Compétence 02</div>
+          <div class="skill-card-title">Développement Web</div>
+          <div class="skill-card-desc">
+            Architecture de solutions web robustes avec les technologies les
+            plus récentes du marché.
+          </div>
+        </div>
+        <div style="margin-top: auto" class="reveal">
+          <a href="#contact" class="btn-outline">En savoir plus</a>
+        </div>
+      </div>
+
+      <!-- Projects col -->
+      <div class="featured-col">
+        <div class="section-tag">Featuring</div>
+        <h2 class="section-title reveal" style="margin-bottom: 20px">
+          Projets
+        </h2>
+
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-thumb">🖥️</div>
+            <div class="project-info">
+              <div class="project-name">Mon Projet</div>
+              <div class="project-desc">
+                Une interface moderne pour la gestion de contenu avec tableaux
+                de bord avancés.
+              </div>
+            </div>
+            <div class="project-check">
+              <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+          </div>
+          <div class="project-card-footer">
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node</span>
+            </div>
+            <a href="#" class="btn-sm">Continuer →</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-card-inner">
+            <div class="project-thumb">🎨</div>
+            <div class="project-info">
+              <div class="project-name">Design System</div>
+              <div class="project-desc">
+                Bibliothèque de composants UI réutilisables pour accélérer le
+                développement d'applications.
+              </div>
+            </div>
+            <div class="project-check">
+              <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+          </div>
+          <div class="project-card-footer">
+            <div class="project-tags">
+              <span class="tag">Figma</span>
+              <span class="tag">CSS</span>
+            </div>
+            <a href="#" class="btn-sm">Continuer →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Large project cards col -->
+      <div class="featured-col">
+        <div class="section-tag">Projets</div>
+        <div class="project-large-grid reveal">
+          <div class="project-large-card">
+            <div class="project-large-preview">🖥️</div>
+            <div class="project-large-body">
+              <div class="project-check" style="margin-bottom: 8px">
+                <svg viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+              <div class="project-large-name">Mon Projet</div>
+              <div class="project-large-desc">
+                Interface moderne avec analytics intégrés et tableaux de bord.
+              </div>
+              <a href="#" class="btn-sm">Continuer →</a>
+            </div>
+          </div>
+          <div class="project-large-card">
+            <div
+              class="project-large-preview"
+              style="background: linear-gradient(135deg, #1a2a1a, #0d3b0d)"
+            >
+              📱
+            </div>
+            <div class="project-large-body">
+              <div
+                class="project-check"
+                style="margin-bottom: 8px; background: var(--gold)"
+              >
+                <svg viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+              <div class="project-large-name">App Mobile</div>
+              <div class="project-large-desc">
+                Application cross-platform pour iOS et Android.
+              </div>
+              <a href="#" class="btn-sm">Continuer →</a>
+            </div>
+          </div>
+          <div class="project-large-card">
+            <div
+              class="project-large-preview"
+              style="background: linear-gradient(135deg, #2a1a0d, #3b1f05)"
+            >
+              ⚡
+            </div>
+            <div class="project-large-body">
+              <div
+                class="project-check"
+                style="margin-bottom: 8px; background: #e74c3c"
+              >
+                <svg viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+              <div class="project-large-name">E-Commerce</div>
+              <div class="project-large-desc">
+                Boutique en ligne optimisée pour la conversion.
+              </div>
+              <a href="#" class="btn-sm">Continuer →</a>
+            </div>
+          </div>
+          <div class="project-large-card">
+            <div
+              class="project-large-preview"
+              style="background: linear-gradient(135deg, #1a0a2a, #2d0f4a)"
+            >
+              🤖
+            </div>
+            <div class="project-large-body">
+              <div
+                class="project-check"
+                style="margin-bottom: 8px; background: #9b59b6"
+              >
+                <svg viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+              <div class="project-large-name">IA Dashboard</div>
+              <div class="project-large-desc">
+                Interface pour visualisation de modèles IA.
+              </div>
+              <a href="#" class="btn-sm">Continuer →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="experience-section" id="experience">
+      <div class="section-tag">Parcours</div>
+      <h2 class="section-title reveal">Expérience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="tl-date">2022 — Présent</div>
+          <div class="tl-title">Lead Developer & Designer</div>
+          <div class="tl-company">Agence Créative Studio</div>
+          <div class="tl-desc">
+            Direction technique de projets complexes, encadrement d'une équipe
+            de 5 développeurs, définition des standards de qualité et des
+            processus de développement.
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-date">2020 — 2022</div>
+          <div class="tl-title">Frontend Developer Senior</div>
+          <div class="tl-company">Tech Innovation Labs</div>
+          <div class="tl-desc">
+            Développement d'interfaces utilisateurs complexes avec React et
+            Vue.js, mise en place d'architectures scalables et optimisation des
+            performances.
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-date">2018 — 2020</div>
+          <div class="tl-title">UX/UI Designer</div>
+          <div class="tl-company">Digital Agency Pro</div>
+          <div class="tl-desc">
+            Conception d'expériences utilisateurs pour des clients dans les
+            secteurs finance, santé et e-commerce. Création de design systems et
+            de guidelines d'accessibilité.
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-date">2016 — 2018</div>
+          <div class="tl-title">Développeur Web Junior</div>
+          <div class="tl-company">StartUp Innovate</div>
+          <div class="tl-desc">
+            Développement full-stack, intégration de designs, et contribution à
+            la mise en place d'une culture d'ingénierie basée sur la qualité et
+            l'itération rapide.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / Support Section -->
+    <section class="services-section">
+      <div class="services-left">
+        <div class="section-tag">Support Personnel</div>
+        <h2 class="section-title reveal">
+          Services <span style="color: var(--accent)">proposés</span>
+        </h2>
+        <p class="service-p reveal">
+          Je propose une gamme complète de services adaptés aux besoins des
+          entreprises et entrepreneurs qui souhaitent développer leur présence
+          numérique avec impact.
+        </p>
+        <p class="service-p reveal" style="margin-top: 0">
+          Chaque projet est abordé avec une attention particulière aux détails,
+          une rigueur technique et une créativité sans limites.
+        </p>
+        <div style="margin-top: 28px" class="reveal">
+          <a href="#contact" class="btn-primary">Commencer un projet</a>
+        </div>
+      </div>
+      <div class="services-right">
+        <div class="section-tag">Portfolio</div>
+        <h2 class="section-title reveal">Infovets</h2>
+        <div class="infovets-grid reveal">
+          <div class="infovet-item">
+            <div class="infovet-check">
+              <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+            <div class="infovet-text">Développement Frontend Responsive</div>
+          </div>
+          <div class="infovet-item">
+            <div class="infovet-check">
+              <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+            <div class="infovet-text">Création d'Identité Visuelle</div>
+          </div>
+          <div class="infovet-item">
+            <div class="infovet-check">
+              <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+            <div class="infovet-text">Design User Interface</div>
+          </div>
+          <div class="infovet-item">
+            <div class="infovet-check">
+              <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+            <div class="infovet-text">Consulting & Coaching</div>
+          </div>
+          <div class="infovet-item">
+            <div class="infovet-check">
+              <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+            <div class="infovet-text">Architecture d'Applications</div>
+          </div>
+          <div class="infovet-item">
+            <div class="infovet-check">
+              <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+            <div class="infovet-text">Optimisation SEO & Performance</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+      <div class="section-tag" style="justify-content: center">Contact</div>
+      <h2 class="contact-title reveal">
+        Travaillons<br /><span class="outlined">ensemble</span>
+      </h2>
+      <p class="contact-desc reveal">
+        Vous avez un projet en tête ? Je serais ravi d'en discuter et de
+        transformer vos idées en réalité digitale.
+      </p>
+      <div style="margin-bottom: 32px" class="reveal">
+        <a href="mailto:hello@portfolio.com" class="contact-email">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+            />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+          tsiryftv@gmail.com
+        </a>
+      </div>
+      <div class="social-links reveal">
+        <a href="https://github.com/Ritsian" class="social-link" title="GitHub">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+            />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/tsiry-ftv-bb4755364?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link" title="LinkedIn">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+            />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
+        <a href="https://x.com/tsiry_ra33556?t=Ul_m2KJmB7As7SJZU0ivIg&s=09" class="social-link" title="Twitter">
+          <svg viewBox="0 0 24 24">
+            <path d="M18.244 2H21.5l-7.19 8.21L22 22h-6.828l-5.35-6.993L3.5 22H.244l7.68-8.77L2 2h6.828l4.85 6.35L18.244 2zm-1.2 18h1.8L7.05 4h-1.8l11.794 16z"/>
+          </svg>
+        </a>
+        <a href="https://wa.me/261349026019"
+        target="_blanc" class="social-link" title="WhatsApp">
+        <svg viewBox="0 0 24 24">
+              <path d="M20.52 3.48A11.78 11.78 0 0 0 12.06 0C5.46 0 .1 5.36.1 11.96c0 2.11.55 4.18 1.6 6L0 24l6.2-1.63a11.9 11.9 0 0 0 5.86 1.5h.01c6.6 0 11.96-5.36 11.96-11.96 0-3.19-1.24-6.19-3.51-8.43zM12.07 21.5c-1.78 0-3.52-.48-5.04-1.39l-.36-.21-3.68.97.98-3.59-.23-.37a9.46 9.46 0 0 1-1.45-5.05c0-5.23 4.26-9.49 9.5-9.49 2.54 0 4.92.99 6.72 2.78a9.43 9.43 0 0 1 2.78 6.71c0 5.24-4.26 9.5-9.49 9.5zm5.2-7.13c-.28-.14-1.64-.81-1.9-.9-.25-.09-.43-.14-.62.14-.18.28-.71.9-.87 1.08-.16.18-.32.21-.6.07-.28-.14-1.18-.43-2.25-1.36-.83-.74-1.4-1.65-1.56-1.93-.16-.28-.02-.43.12-.57.12-.12.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.35-.02-.49-.07-.14-.62-1.5-.85-2.06-.22-.53-.45-.46-.62-.47h-.53c-.18 0-.49.07-.75.35s-.98.96-.98 2.34.99 2.71 1.13 2.9c.14.18 1.95 2.98 4.72 4.18.66.28 1.18.45 1.58.58.66.21 1.26.18 1.73.11.53-.08 1.64-.67 1.87-1.32.23-.65.23-1.21.16-1.32-.07-.11-.25-.18-.53-.32z"/>
+              </svg>
+          </a>
+        
+        <a href="https://www.facebook.com/ra.tsiry.80798" class="social-link"   title="Facebook">
+        <svg viewBox="0 0 24 24">
+        <path d="M22 12a10 10 0 1 0-11.63 9.87v-6.99h-2.8V12h2.8V9.8c0-2.77 1.64-4.3 4.15-4.3 1.2 0 2.45.21 2.45.21v2.7h-1.38c-1.36 0-1.78.84-1.78 1.7V12h3.03l-.48 2.88h-2.55v6.99A10 10 0 0 0 22 12z"/>
+        </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-copy">© 2024 Portfolio. Tous droits réservés.</div>
+      <div class="footer-links">
+        <a href="#">Confidentialité</a>
+        <a href="#">Mentions légales</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
